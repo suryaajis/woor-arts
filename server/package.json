@@ -9,14 +9,19 @@
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
-    "nodemon": "^2.0.15",
     "pg": "^8.7.3",
-    "sequelize": "^6.15.0",
+    "sequelize": "^6.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
     "sequelize-cli": "^6.4.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development npx nodemon app.js",
+    "start": "npx nodemon app",
+    "test": "npx jest --watchAll --detectOpenHandles --runInBand --verbose --forceExit --coverage",
+    "init-db:dev": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "init-db:test": "npx sequelize --env=test db:drop && npx sequelize --env=test db:create && npx sequelize --env=test db:migrate"
   },
   "keywords": [],
   "author": "",

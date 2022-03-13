@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/App.js"],
+  content: ["./src/views/Home.js", "./src/components/Sidenav.js", "./src/components/Navbar.js"],
   presets: [],
   darkMode: 'media', // or 'class'
   theme: {

@@ -1,12 +1,15 @@
 import "./App.css";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import Home from "./views/Home";
 
 function App() {
   return (
-    <div>
-      <p className="italic text-3xl font-bold">Hello World From The Hell</p>;
-      <img src="https://drive.google.com/uc?id=1HjN7oTxY1eZbAa45anndbbB4wtXJvEiH" style={{width:400,height:400}} />
-    </div>
-  )
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={Home} />
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 export default App;

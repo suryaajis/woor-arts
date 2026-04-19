@@ -4,9 +4,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**woor-arts** is a full-stack artwork management/selling platform. The repo is a monorepo with two packages:
+**woor-arts** is a digital art portfolio and freelance marketplace for an illustrator. Visitors browse artwork by category, view the artist's profile/certifications, explore commercial/commission workflow, and find the artist on Fiverr, Upwork, and social media (IG, Pinterest, Behance, FB).
+
+Monorepo with two packages:
 - `server/` — Express + Sequelize REST API (Node.js)
 - `client/` — React (CRA) frontend with TailwindCSS
+
+### UI Layout (from `mockup/`)
+- **Navbar:** LOGO | MASSAGE ME | HOME
+- **Sidenav:** ABOUT ME | BUSINESS AND COMMERCIAL | SOCIAL MEDIA | CHECK AND CHECK
+- **Home:** Art category grid — Surrealism (center), Trippy, Psychedelic, Fantasy, Abstract, Pop Art/Cartoon, NFT, Fan Art/Fun Art
+- **About Me:** Artist photo + bio, certifications
+- **Business & Commercial:** Commission workflow (brief → concept → sketch → delivery), downloadable PDF/ISO, Fiverr & Upwork links
+- **Social Media:** IG, Pinterest, Behance, FB links
+
+Artwork images live in `client/src/assets/` (70+ files, mix of JPG/PNG).
 
 ---
 

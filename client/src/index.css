@@ -1,7 +1,5 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 body {
@@ -11,9 +9,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0f1117;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Art category grid — matches mockup layout */
+.art-grid {
+  display: grid;
+  grid-template-areas:
+    "trippy      surrealism  psychedelic"
+    "fantasy     surrealism  abstract"
+    "popart      nft         fanart";
+  grid-template-columns: 1fr 1.4fr 1fr;
+  grid-template-rows: 230px 230px 230px;
+  gap: 12px;
+}
+
+.art-grid-area-surrealism  { grid-area: surrealism; }
+.art-grid-area-trippy      { grid-area: trippy; }
+.art-grid-area-psychedelic { grid-area: psychedelic; }
+.art-grid-area-fantasy     { grid-area: fantasy; }
+.art-grid-area-abstract    { grid-area: abstract; }
+.art-grid-area-popart      { grid-area: popart; }
+.art-grid-area-nft         { grid-area: nft; }
+.art-grid-area-fanart      { grid-area: fanart; }
+
+@media (max-width: 768px) {
+  .art-grid {
+    grid-template-areas: none;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 8px;
+  }
+
+  .art-grid-area-surrealism,
+  .art-grid-area-trippy,
+  .art-grid-area-psychedelic,
+  .art-grid-area-fantasy,
+  .art-grid-area-abstract,
+  .art-grid-area-popart,
+  .art-grid-area-nft,
+  .art-grid-area-fanart {
+    grid-area: auto;
+    height: 150px;
+  }
 }
